@@ -278,3 +278,94 @@ The project repository contains the implementation details, AWS architecture, co
 AWS-EC2-Monitoring-Project/
 |
 +-- README.md
+---
+
+## 🛠️ Tools and Technologies
+
+| Technology | Purpose |
+|---|---|
+| Amazon EC2 | Compute Resource |
+| Amazon EBS | Persistent Block Storage |
+| Amazon CloudWatch | Monitoring and Metrics |
+| Amazon Linux | Operating System |
+| SSH | Secure Remote Access |
+| Git | Version Control |
+| GitHub | Repository and Project Management |
+
+---
+
+## 🎯 Skills Demonstrated
+
+- AWS EC2 Instance Management
+- Amazon EBS Storage Management
+- Linux System Administration
+- SSH Remote Access
+- Disk Formatting and Mounting
+- File and Storage Management
+- Amazon CloudWatch Monitoring
+- CPU Utilization Monitoring
+- Git Version Control
+- GitHub Repository Management
+- Basic DevOps Practices
+
+---
+
+## 📚 Key Learning Outcomes
+
+Through this project, I gained practical experience in:
+
+- Launching and managing Amazon EC2 instances
+- Connecting to Linux servers using SSH
+- Creating and attaching EBS volumes
+- Formatting and mounting EBS storage
+- Managing files on mounted storage
+- Monitoring EC2 performance using CloudWatch
+- Understanding CPU Utilization metrics
+- Using Linux command-line operations
+- Using Git for version control
+- Managing and documenting projects using GitHub
+- Understanding fundamental AWS Cloud and DevOps concepts
+
+---
+
+## 🚀 Future Improvements
+
+The project can be extended by implementing:
+
+- CloudWatch Alarms
+- Amazon SNS Notifications
+- IAM Security Configuration
+- Automated EBS Snapshots
+- Infrastructure as Code using Terraform
+- Docker Deployment
+- CI/CD Pipeline
+- Automated Monitoring and Alerting
+
+---
+
+## ⭐ Project Highlights
+
+- Hands-on AWS EC2 implementation
+- EBS storage configuration and management
+- CloudWatch performance monitoring
+- Linux server administration
+- SSH-based remote access
+- Git and GitHub integration
+- Practical cloud infrastructure experience
+- Basic DevOps workflow implementation
+
+---
+
+## 👩‍💻 Author
+
+**Megha Gole**
+
+AWS Cloud & DevOps Learner
+
+---
+
+## 📝 Conclusion
+
+This project provided hands-on experience with AWS cloud infrastructure, EC2 compute resources, EBS persistent storage, CloudWatch monitoring, Linux administration, and Git/GitHub version control.
+
+The project demonstrates the practical implementation of fundamental AWS Cloud and basic DevOps concepts in a real-world style infrastructure environment.
