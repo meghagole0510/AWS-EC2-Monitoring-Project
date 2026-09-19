@@ -1,68 +1,154 @@
-# AWS EC2 Monitoring Project
+# ☁️ AWS EC2 Monitoring, EBS Storage & CloudWatch Project
 
 ## 📌 Project Overview
 
-This project demonstrates the practical implementation of AWS cloud infrastructure using Amazon EC2, Amazon EBS, and Amazon CloudWatch.
+This project demonstrates the practical implementation of AWS cloud infrastructure using **Amazon EC2, Amazon EBS, and Amazon CloudWatch**, along with **Linux, SSH, Git, and GitHub**.
 
-The project focuses on launching and managing an EC2 instance, attaching and configuring EBS storage, monitoring instance performance using CloudWatch, and managing the project using Git and GitHub.
+The project was developed to gain hands-on experience in cloud infrastructure management, Linux system administration, storage management, performance monitoring, and basic DevOps practices.
 
----
+In this project, an **Amazon EC2 Linux instance** was launched and configured as the main compute resource. An additional **Amazon EBS volume** was created and attached to the EC2 instance to provide persistent block storage. The EBS volume was identified, formatted, mounted, and used for storing and managing files.
 
-## 🏗️ AWS Architecture
+**Amazon CloudWatch** was used to monitor the EC2 instance and observe its **CPU Utilization** metric. This provided practical experience in monitoring AWS resources and understanding server performance.
 
-EC2 Instance
-      |
-      └── EBS Volume
-      |
-      └── CloudWatch
-            |
-            └── CPU Utilization Monitoring
+**Git and GitHub** were used for version control, project documentation, and maintaining the project repository.
 
-Git → GitHub
+Overall, this project combines **AWS Cloud, EC2, EBS, CloudWatch, Linux, SSH, Git, and GitHub** into one practical cloud infrastructure implementation.
 
 ---
 
-## ☁️ AWS Services Used
+## 🎯 Project Objectives
 
-| Service | Purpose |
-|---|---|
-| Amazon EC2 | Compute server / virtual machine |
-| Amazon EBS | Persistent block storage |
-| Amazon CloudWatch | Monitoring and performance metrics |
-| Git | Version control |
-| GitHub | Source code and project documentation |
+The main objectives of this project are:
 
----
-
-## 💻 Amazon EC2
-
-An Amazon EC2 Linux instance was launched and configured as the main compute resource.
-
-### Tasks Performed
-
-- Launched an EC2 instance
-- Connected to the instance using SSH
-- Performed Linux command-line operations
-- Checked system and storage information
-- Managed the EC2 environment
+- To understand AWS cloud infrastructure
+- To launch and manage an Amazon EC2 Linux instance
+- To connect to EC2 using SSH
+- To perform Linux administration tasks
+- To create and attach an EBS volume
+- To format and mount EBS storage
+- To create and manage files on mounted storage
+- To monitor EC2 performance using CloudWatch
+- To monitor CPU Utilization
+- To understand basic cloud monitoring
+- To use Git for version control
+- To maintain the project using GitHub
+- To gain practical exposure to basic DevOps practices
 
 ---
 
-## 💾 Amazon EBS
+# 🏗️ AWS Architecture
 
-An additional EBS volume was attached to the EC2 instance for persistent storage.
+```text
+                         AWS CLOUD
+                             │
+                             ▼
+                    ┌─────────────────┐
+                    │   Amazon EC2    │
+                    │   Linux Server  │
+                    └────────┬────────┘
+                             │
+              ┌──────────────┴──────────────┐
+              │                             │
+              ▼                             ▼
+     ┌─────────────────┐          ┌─────────────────────┐
+     │    Amazon EBS   │          │   Amazon CloudWatch │
+     │ Persistent      │          │     Monitoring      │
+     │ Block Storage   │          └──────────┬──────────┘
+     └────────┬────────┘                     │
+              │                              ▼
+              ▼                     ┌─────────────────────┐
+     ┌─────────────────┐             │  CPU Utilization   │
+     │ Format / Mount  │             │      Metrics       │
+     │     /index      │             └─────────────────────┘
+     └────────┬────────┘
+              │
+              ▼
+     ┌─────────────────┐
+     │ Files / Data    │
+     │   test.txt      │
+     └─────────────────┘
 
-### Tasks Performed
 
-- Created an EBS volume
-- Attached the volume to EC2
-- Formatted the volume
-- Created a mount point
-- Mounted the EBS volume
-- Created and managed files on the mounted storage
-- Verified disk usage using Linux commands
+                  VERSION CONTROL
+                         │
+                         ▼
+                    ┌─────────┐
+                    │   Git   │
+                    └────┬────┘
+                         │
+                         ▼
+                    ┌─────────┐
+                    │ GitHub  │
+                    └─────────┘
+                    START
+                      │
+                      ▼
+             Launch EC2 Instance
+                      │
+                      ▼
+              Connect using SSH
+                      │
+                      ▼
+           Linux Administration
+                      │
+                      ▼
+             Create EBS Volume
+                      │
+                      ▼
+            Attach EBS to EC2
+                      │
+                      ▼
+          Identify Storage Device
+                      │
+                      ▼
+            Format EBS Volume
+                      │
+                      ▼
+            Create Mount Point
+                      │
+                      ▼
+             Mount EBS Volume
+                      │
+                      ▼
+           Store / Manage Files
+                      │
+                      ▼
+          Configure CloudWatch
+                      │
+                      ▼
+        Monitor CPU Utilization
+                      │
+                      ▼
+             Git Version Control
+                      │
+                      ▼
+             Push to GitHub
+                      │
+                      ▼
+                     END
 
-Example:
 
-```bash
-df -h
+#EBS Implementation
+
+Create EBS Volume
+       │
+       ▼
+Attach Volume to EC2
+       │
+       ▼
+Identify Device
+       │
+       ▼
+Format Volume
+       │
+       ▼
+Create Mount Point
+       │
+       ▼
+Mount Volume
+       │
+       ▼
+Create / Store Files
+       │
+       ▼
+Verify Storage
