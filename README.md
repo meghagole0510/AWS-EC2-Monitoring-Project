@@ -2,17 +2,17 @@
 
 ## 📌 Project Overview
 
-This project demonstrates the practical implementation of AWS cloud infrastructure using **Amazon EC2, Amazon EBS, and Amazon CloudWatch**, along with **Linux, SSH, Git, and GitHub**.
+This project demonstrates the practical implementation of AWS cloud infrastructure using Amazon EC2, Amazon EBS, and Amazon CloudWatch, along with Linux, SSH, Git, and GitHub.
 
 The project was developed to gain hands-on experience in cloud infrastructure management, Linux system administration, storage management, performance monitoring, and basic DevOps practices.
 
-In this project, an **Amazon EC2 Linux instance** was launched and configured as the main compute resource. An additional **Amazon EBS volume** was created and attached to the EC2 instance to provide persistent block storage. The EBS volume was identified, formatted, mounted, and used for storing and managing files.
+In this project, an Amazon EC2 Linux instance was launched and configured as the main compute resource. An additional Amazon EBS volume was created and attached to the EC2 instance to provide persistent block storage.
 
-**Amazon CloudWatch** was used to monitor the EC2 instance and observe its **CPU Utilization** metric. This provided practical experience in monitoring AWS resources and understanding server performance.
+The EBS volume was identified, formatted, mounted, and used for storing and managing files.
 
-**Git and GitHub** were used for version control, project documentation, and maintaining the project repository.
+Amazon CloudWatch was used to monitor the EC2 instance and observe CPU Utilization metrics.
 
-Overall, this project combines **AWS Cloud, EC2, EBS, CloudWatch, Linux, SSH, Git, and GitHub** into one practical cloud infrastructure implementation.
+Git and GitHub were used for version control, project documentation, and maintaining the project repository.
 
 ---
 
@@ -20,135 +20,261 @@ Overall, this project combines **AWS Cloud, EC2, EBS, CloudWatch, Linux, SSH, Gi
 
 The main objectives of this project are:
 
-- To understand AWS cloud infrastructure
-- To launch and manage an Amazon EC2 Linux instance
-- To connect to EC2 using SSH
-- To perform Linux administration tasks
-- To create and attach an EBS volume
-- To format and mount EBS storage
-- To create and manage files on mounted storage
-- To monitor EC2 performance using CloudWatch
-- To monitor CPU Utilization
-- To understand basic cloud monitoring
-- To use Git for version control
-- To maintain the project using GitHub
-- To gain practical exposure to basic DevOps practices
+- Understand AWS cloud infrastructure
+- Launch and manage an Amazon EC2 Linux instance
+- Connect to EC2 using SSH
+- Perform Linux administration tasks
+- Create and attach an EBS volume
+- Format and mount EBS storage
+- Create and manage files on mounted storage
+- Monitor EC2 performance using CloudWatch
+- Monitor CPU Utilization
+- Understand basic cloud monitoring
+- Use Git for version control
+- Maintain the project using GitHub
+- Gain practical exposure to basic DevOps practices
 
 ---
 
-# 🏗️ AWS Architecture
+## 🏗️ AWS Architecture
 
 ```text
                          AWS CLOUD
-                             │
-                             ▼
-                    ┌─────────────────┐
-                    │   Amazon EC2    │
-                    │   Linux Server  │
-                    └────────┬────────┘
-                             │
-              ┌──────────────┴──────────────┐
-              │                             │
-              ▼                             ▼
-     ┌─────────────────┐          ┌─────────────────────┐
-     │    Amazon EBS   │          │   Amazon CloudWatch │
-     │ Persistent      │          │     Monitoring      │
-     │ Block Storage   │          └──────────┬──────────┘
-     └────────┬────────┘                     │
-              │                              ▼
-              ▼                     ┌─────────────────────┐
-     ┌─────────────────┐             │  CPU Utilization   │
-     │ Format / Mount  │             │      Metrics       │
-     │     /index      │             └─────────────────────┘
-     └────────┬────────┘
-              │
-              ▼
-     ┌─────────────────┐
-     │ Files / Data    │
-     │   test.txt      │
-     └─────────────────┘
+                             |
+                             v
+                    +-----------------+
+                    |   Amazon EC2    |
+                    |   Linux Server  |
+                    +--------+--------+
+                             |
+                +------------+------------+
+                |                         |
+                v                         v
+       +-----------------+       +---------------------+
+       |    Amazon EBS   |       |   Amazon CloudWatch |
+       | Persistent      |       |     Monitoring      |
+       | Block Storage   |       +----------+----------+
+       +--------+--------+                  |
+                |                           v
+                v                  +---------------------+
+       +-----------------+         |  CPU Utilization   |
+       | Format & Mount  |         |      Metrics       |
+       |     /index      |         +---------------------+
+       +--------+--------+
+                |
+                v
+       +-----------------+
+       | Files / Data    |
+       |   test.txt      |
+       +-----------------+
 
+                    |
+                    v
+             +--------------+
+             |     Git      |
+             +------+-------+
+                    |
+                    v
+             +--------------+
+             |    GitHub    |
+             +--------------+
 
-                  VERSION CONTROL
-                         │
-                         ▼
-                    ┌─────────┐
-                    │   Git   │
-                    └────┬────┘
-                         │
-                         ▼
-                    ┌─────────┐
-                    │ GitHub  │
-                    └─────────┘
-                    START
-                      │
-                      ▼
-             Launch EC2 Instance
-                      │
-                      ▼
-              Connect using SSH
-                      │
-                      ▼
-           Linux Administration
-                      │
-                      ▼
-             Create EBS Volume
-                      │
-                      ▼
-            Attach EBS to EC2
-                      │
-                      ▼
-          Identify Storage Device
-                      │
-                      ▼
-            Format EBS Volume
-                      │
-                      ▼
-            Create Mount Point
-                      │
-                      ▼
-             Mount EBS Volume
-                      │
-                      ▼
-           Store / Manage Files
-                      │
-                      ▼
-          Configure CloudWatch
-                      │
-                      ▼
-        Monitor CPU Utilization
-                      │
-                      ▼
-             Git Version Control
-                      │
-                      ▼
-             Push to GitHub
-                      │
-                      ▼
-                     END
+## 🔄 Complete Project Workflow
 
-
-#EBS Implementation
-
+```text
+START
+  |
+  v
+Launch EC2 Instance
+  |
+  v
+Connect using SSH
+  |
+  v
+Perform Linux Administration
+  |
+  v
 Create EBS Volume
-       │
-       ▼
-Attach Volume to EC2
-       │
-       ▼
-Identify Device
-       │
-       ▼
-Format Volume
-       │
-       ▼
+  |
+  v
+Attach EBS Volume to EC2
+  |
+  v
+Identify Storage Device
+  |
+  v
+Format EBS Volume
+  |
+  v
 Create Mount Point
-       │
-       ▼
-Mount Volume
-       │
-       ▼
-Create / Store Files
-       │
-       ▼
-Verify Storage
+  |
+  v
+Mount EBS Volume
+  |
+  v
+Create and Manage Files
+  |
+  v
+Configure CloudWatch
+  |
+  v
+Monitor CPU Utilization
+  |
+  v
+Git Version Control
+  |
+  v
+Push Project to GitHub
+  |
+  v
+END
+```
+
+---
+
+## 💾 Amazon EBS Implementation
+
+Amazon Elastic Block Store (EBS) was implemented to provide persistent block-level storage for the EC2 instance.
+
+### EBS Implementation Steps
+
+### 1. Create EBS Volume
+
+An additional EBS volume was created using the AWS Management Console.
+
+### 2. Attach EBS Volume
+
+The EBS volume was attached to the running EC2 instance.
+
+### 3. Identify Storage Device
+
+The attached storage device was identified using:
+
+```bash
+lsblk
+```
+
+### 4. Format EBS Volume
+
+The EBS volume was formatted using the XFS filesystem:
+
+```bash
+sudo mkfs -t xfs /dev/nvme1n1
+```
+
+### 5. Create Mount Point
+
+A mount directory was created:
+
+```bash
+sudo mkdir /index
+```
+
+### 6. Mount EBS Volume
+
+The EBS volume was mounted to the `/index` directory:
+
+```bash
+sudo mount /dev/nvme1n1 /index
+```
+
+### 7. Create and Manage Files
+
+A test file was created inside the mounted EBS storage:
+
+```bash
+touch /index/test.txt
+```
+
+The file was verified using:
+
+```bash
+ls -lh /index
+```
+
+### 8. Verify Storage
+
+Disk usage was checked using:
+
+```bash
+df -h
+```
+
+The EBS volume was successfully formatted, mounted, and used for storing data.
+---
+
+## 💻 Amazon EC2 Implementation
+
+Amazon EC2 was used as the main compute resource for this project.
+
+### EC2 Tasks Performed
+
+- Launched an Amazon Linux EC2 instance
+- Connected to the instance using SSH
+- Performed Linux command-line operations
+- Checked system information
+- Checked storage information
+- Managed the EC2 environment
+- Attached EBS storage
+- Monitored the instance using CloudWatch
+
+---
+
+## 🔐 SSH Connection
+
+The EC2 instance was accessed remotely using SSH.
+
+Example:
+
+```bash
+ssh -i <key-file.pem> ec2-user@<public-ip>
+SSH provided secure remote access to the Linux EC2 instance.
+
+---
+
+## 📊 Amazon CloudWatch Implementation
+
+Amazon CloudWatch was used to monitor the EC2 instance and observe its performance.
+
+### Monitoring Performed
+
+- CPU Utilization
+- EC2 performance metrics
+- Resource monitoring
+- Performance activity over time
+
+CloudWatch helped in understanding EC2 performance and resource utilization.
+
+---
+
+## 🔧 Git Version Control
+
+Git was used for version control and project management.
+
+### Git Tasks Performed
+
+- Installed Git
+- Initialized a Git repository
+- Configured Git user
+- Added project files
+- Created commits
+- Created and used the main branch
+- Connected the local repository with GitHub
+- Pushed project changes to GitHub
+
+---
+
+## 🐙 GitHub
+
+GitHub was used to store the project and maintain project documentation.
+
+The project repository contains the implementation details, AWS architecture, commands, and learning outcomes.
+
+---
+
+## 📁 Project Structure
+
+```text
+AWS-EC2-Monitoring-Project/
+|
++-- README.md
