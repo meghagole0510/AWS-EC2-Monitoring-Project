@@ -228,8 +228,7 @@ Example:
 
 ```bash
 ssh -i <key-file.pem> ec2-user@<public-ip>
-SSH provided secure remote access to the Linux EC2 instance.
-
+```
 ---
 
 ## 📊 Amazon CloudWatch Implementation
@@ -278,6 +277,7 @@ The project repository contains the implementation details, AWS architecture, co
 AWS-EC2-Monitoring-Project/
 |
 +-- README.md
+```
 ---
 
 ## 🛠️ Tools and Technologies
