@@ -78,7 +78,7 @@ The main objectives of this project are:
              +--------------+
              |    GitHub    |
              +--------------+
-
+```
 ## 🔄 Complete Project Workflow
 
 ```text
