@@ -246,6 +246,26 @@ CloudWatch helped in understanding EC2 performance and resource utilization.
 
 ---
 
+## 📸 Project Screenshots
+
+### 1. SSH Connection to EC2
+
+![SSH Connection](1.png)
+
+### 2. EBS Storage Configuration
+
+![EBS Storage](2.png)
+
+### 3. CloudWatch CPU Monitoring
+
+![CloudWatch Monitoring](3.png)
+
+### 4. EC2 Web Server
+
+![EC2 Web Server](4.png)
+
+---
+
 ## 🔧 Git Version Control
 
 Git was used for version control and project management.
